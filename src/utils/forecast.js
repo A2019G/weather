@@ -8,7 +8,7 @@ const forecast = (lat, lon, callback)=>{
         } else if(response.body.error){
             callback('wrong cords', undefined)
         } else{
-            callback(undefined, ` ${response.body.daily.data[0].summary} The temperature now is ${response.body.currently.temperature} and raining chances are ${response.body.currently.precipProbability} %` )
+            callback(undefined, ` ${response.body.daily.data[0].summary} The temperature now is ${response.body.currently.temperature} and raining chances are ${response.body.currently.precipProbability} % and the wind speed is ${response.body.currently.windSpeed} meters per second` )
 
         }
     })
