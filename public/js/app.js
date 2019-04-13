@@ -15,7 +15,7 @@ forma.addEventListener('submit', (e)=>{
     firstP.textContent ='loading'
     e.preventDefault()
     const location = search.value
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response)=>{
+    fetch(`/weather?address=${location}`).then((response)=>{
         response.json().then((data)=>{ //in json format, do the following
             if(data.error){
                 firstP.textContent ='Erro Processing the Request'
